@@ -12,32 +12,53 @@ import java.util.*;
  */
 public class HelloWorld {
     public static void main(String[] args) {
-        System.out.println("Enter X and Y");
+        System.out.println("Enter Age and Sale ");
         Scanner sc = new Scanner(System.in);
         
-        int x = sc.nextInt();
-        int y = sc.nextInt();
-        
-        //Swapping two numbers
-//        
-//        int temp = x;
-//        x = y;
-//        y = temp;
-//        
-//        System.out.println("Swapping x and y are:" + x + " and " + y);
-        
-        //Swapping two numbers without creating any new variable;
-        
-        x = x + y;
-        y = x - y;
-        x = x - y;
-        
-        System.out.println("Swapping x and y are:" + x + " and " + y);
+        int age = sc.nextInt();
+        int sale = sc.nextInt();
+        int commision;
         
         
-        
-        
-    
+        if(age <= 0 && sale <= 0){
+            
+            System.out.println("age and sale should be positive");
+            
+        }
+        else {
+            
+            if(sale >= 10000 && sale < 50000){
+                
+                if(age >= 60){
+                    
+                    commision = (int) (0.055 * sale);
+                    
+                }
+                else{
+                    
+                    commision = (int)(0.5 * sale);
+                    
+                }
+                
+            }
+            else{
+                
+                if(age < 60){
+                    
+                    commision = (int) (0.60 * sale);
+                    
+                }
+                else{
+                    
+                    commision = (int) (0.65 * sale);
+                    
+                }
+                
+            }
+            
+            System.out.println("Commision is: " + commision);
+            
+        }                
         
     }
     
