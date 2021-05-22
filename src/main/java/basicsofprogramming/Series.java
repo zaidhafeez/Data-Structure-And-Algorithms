@@ -11,19 +11,25 @@ import java.util.Scanner;
  *
  * @author zaid
  */
-public class CalculateFactorial {
+public class Series {
     public static void main(String[] args) {
-        System.out.println("Enter Number");
+        System.out.println("Enter How much you want term");
         Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();
-        int fact = 1;
+        int sum = 0;
+        int term = 1;
         
-        for(int i = 2; i <= number; i++){
+        System.out.print("Print term :");
+        for(int i = 1; i <= number; i++){
             
-            fact = fact * i;
+            
+            System.out.print("\t" + term);
+            sum = sum + term;
+            term = term * (-2);
             
         }
-        System.out.printf("The factorial of %d is %d",number,fact);
+        System.out.println("");
+        System.out.println("The sum is " + sum);
     }
     
 }
