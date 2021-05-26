@@ -94,15 +94,20 @@ public class DynamicArray {
         
         
         Array obj = new Array(size);
+        
+        int element;
+        System.out.println("Enter Element");
+        
+        for (int i = 0; i < size; i++){
+            
+           element = sc.nextInt();
+           obj.insert(element);
+           
+        }
+        
+        
         System.out.println("Enter Check Number");
         int checkNumber = sc.nextInt();
-        
-        obj.insert(10);
-        obj.insert(20);
-        obj.insert(30);
-        obj.insert(40);
-        obj.insert(50);
-        
         obj.printArray();
         System.out.println("");
         System.out.println(obj.checkElement(checkNumber));
