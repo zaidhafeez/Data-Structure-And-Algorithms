@@ -46,7 +46,7 @@ class SortZeroOneTwo{
             
             if(arr[i] == 1){
                 
-                arr[count--] = 1;
+                arr[count] = 1;
                 count++;
                 System.out.println("The count of 1 " + count);
                 
@@ -57,7 +57,7 @@ class SortZeroOneTwo{
             
             if(arr[i] == 2){
                 
-                arr[count--] = 2;
+                arr[count] = 2;
                 count++;
                 System.out.println("The count of 2" + count);
                 
