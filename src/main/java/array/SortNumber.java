@@ -30,39 +30,40 @@ class SortZeroOneTwo{
     }
     
     public void sortEl(){
+         
+        int i, count0 = 0,count1 = 0,count2 = 0;
         
-        for (int i = 0; i < arr.length; i++) {
+        for(i = 0; i < arr.length; i++){
             
-            if(arr[i] == 0){
+            switch(arr[i]){
                 
-                arr[count] = 0;
-                count++;
-                System.out.println("The count of 0 " + count);
-                
+                case 0:
+                    count0++;
+                    break;
+                case 1:
+                    count1++;
+                    break;
+                case 2:
+                    count2++;
+                    break;
+            
             }
             
         }
-        for (int i = 0; i < arr.length; i++) {
+        
             
-            if(arr[i] == 1){
-                
-                arr[count] = 1;
-                count++;
-                System.out.println("The count of 1 " + count);
-                
-            }
-            
+        i = 0;
+        while(count0 > 0){
+            arr[i++] = 0;
+            count0--;
         }
-        for (int i = 0; i < arr.length; i++) {
-            
-            if(arr[i] == 2){
-                
-                arr[count] = 2;
-                count++;
-                System.out.println("The count of 2" + count);
-                
-            }
-            
+        while(count1 > 0){
+            arr[i++] = 1;
+            count1--;
+        }
+        while(count2 > 0){
+            arr[i++] = 2;
+            count2--;
         }
         
     }
